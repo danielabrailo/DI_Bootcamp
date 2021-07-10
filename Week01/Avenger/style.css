@@ -1,0 +1,46 @@
+
+ul {
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color:black;
+  }
+li {
+    list-style: none;
+    color: white;
+    display: block;
+    float: right;
+    padding: 15px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#icon {
+    float: left;
+}
+
+body {
+    background-image: url(bw3.jpg);
+    background-size: cover;
+    color:black;
+    font-family: 'Mulish', sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+#text {
+    text-align: left;
+    display: inline-block;
+    width: 500px;
+    font-size: 20px;
+}
+
+img {
+    float: left;
+}
+
+footer {
+    clear: both;
+}
