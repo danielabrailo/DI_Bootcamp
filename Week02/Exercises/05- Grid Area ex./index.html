@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+    display: grid;
+    height: 200px;
+    width: 500px;
+    grid-gap: 2px;    
+    grid-template-areas:
+    "header header header"
+    "left middle right" 
+    "left center center" 
+    "left2 left2 right2"
+    "footer footer footer";
+    text-align: center; 
+}
+.box1 {
+    grid-area: header;
+    background-color: rgb(168, 13, 230);
+}
+
+.box2 {
+    background-color: rgb(29, 34, 99);
+    grid-area: left;
+}
+
+.box3 {
+    background-color: rgb(149, 149, 233);
+    grid-area: middle;
+}
+.box4 {
+    background-color: rgb(18, 231, 238);
+    grid-area: right;
+}
+.box5 {
+    background-color: rgb(125, 96, 202);
+    grid-area: center;
+}
+.box6 {
+    background-color: rgb(203, 44, 218);
+    grid-area: left2;
+  }
+.box7 {
+    background-color: rgb(47, 63, 214);
+    grid-area: right2;
+}
+
+.box8 {
+    background-color: rgb(86, 105, 190);
+    grid-area: footer;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+  <div class="box1">1</div>
+  <div class="box2">2</div>
+  <div class="box3">3</div>
+  <div class="box4">4</div>
+  <div class="box5">5</div>
+  <div class="box6">6</div>
+  <div class="box7">7</div>
+  <div class="box8">8</div>
+</div>
+</body>
+</html>
