@@ -3,7 +3,12 @@ html,h1,h2,h3,h4,h5,h6,a{
 }
 
 .navbar {
-    font-size: 2rem;
+    font-size: 2rem;    
+}
+
+.nav-item {
+    margin: 0 10px;
+    padding: 0 10px;
 }
 
 #header {
@@ -38,8 +43,8 @@ html,h1,h2,h3,h4,h5,h6,a{
 #welcome {
     font-size: 5rem;
     border-bottom: solid 5px black;
-    border-right: solid 5px black;
-}
+    border-right: solid 5px black;   
+    }
 
 #learn {
     color: black;
