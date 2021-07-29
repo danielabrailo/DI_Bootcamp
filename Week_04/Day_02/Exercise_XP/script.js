@@ -119,3 +119,70 @@ console.log(sum); // the final price of the shopping list
 }
 
 myBill();
+
+//Exercise 8
+function tipCalculator() {
+    let bill = prompt("How much was the bill?");
+    let tip;
+    if (bill < 50) {
+        tip = parseInt((bill * 0.2));
+        console.log("The tip should be: $" + tip);
+    }
+    else if (bill <= 200) {
+        tip = parseInt((bill * 0.15));
+        console.log("The tip should be: $" + tip);
+    }
+    else if (bill > 200) {
+        tip = parseInt((bill * 0.1));
+        console.log("The tip should be: $" + tip);
+    }    
+    console.log("The final bill is: $" + (+bill + tip));
+}
+
+tipCalculator();
+
+//Exercise 9
+function hotelCost() {
+    let nights = prompt("How many nights are you staying at the hotel?");
+    if (!nights || isNaN(nights)) {
+        hotelCost();
+    }
+    else {
+        return (+nights * 140);       
+    }
+    
+}
+
+function planetRideCost() {
+    let destination = prompt("What is your destination?");
+    if (!destination) {
+        planetRideCost();
+    }
+    else if (destination === "London") {
+        return 183;    
+    }
+    else if (destination === "Paris") {
+        return 220;
+    }
+    else {
+        return 300;
+    }
+    }
+
+  function rentalCarCost() {
+      let days = prompt("How many days are you renting the car?");
+      if (!days || isNaN(days)) {
+          rentalCarCost();
+      }
+      let totalCost = (+days * 40);
+      if (days >= 10) {
+          totalCost = (totalCost - (totalCost*0.05));
+      }
+      return totalCost; 
+      }
+    
+function totalVacationCost() {
+    console.log(parseInt(hotelCost() + planetRideCost() + rentalCarCost()));
+}
+
+totalVacationCost();
