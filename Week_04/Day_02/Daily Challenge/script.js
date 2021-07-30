@@ -1,4 +1,5 @@
-let words = prompt("Write several words separated by a coma").split(", ");
+let words = prompt("Write several words separated by a coma").split(",");
+words = words.map(word => word.trim());
 
 let longestWord="";
 for (i=0; i<words.length; i++){
