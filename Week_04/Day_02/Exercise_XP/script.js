@@ -66,12 +66,10 @@ let amazonBasket = {
 
 function checkBasket(){
     let item = prompt("Choose an item");
-    if (item in amazonBasket) {
-        alert("The item is in the basket");
-    }
-    else {
-        alert("The item is not available");
-    }
+    if (item in amazonBasket) 
+        alert("The item is in the basket");    
+    else 
+        alert("The item is not available");    
 }
 
 checkBasket();
@@ -126,16 +124,14 @@ function tipCalculator() {
     let tip;
     if (bill < 50) {
         tip = parseInt((bill * 0.2));
-        console.log("The tip should be: $" + tip);
     }
     else if (bill <= 200) {
-        tip = parseInt((bill * 0.15));
-        console.log("The tip should be: $" + tip);
+        tip = parseInt((bill * 0.15));       
     }
     else if (bill > 200) {
-        tip = parseInt((bill * 0.1));
-        console.log("The tip should be: $" + tip);
+        tip = parseInt((bill * 0.1));        
     }    
+    console.log("The tip should be: $" + tip);
     console.log("The final bill is: $" + (+bill + tip));
 }
 
