@@ -151,17 +151,17 @@ function hotelCost() {
 
 function planetRideCost() {
     let destination = prompt("What is your destination?");
-    if (!destination) {
-        planetRideCost();
-    }
-    else if (destination === "London") {
+     if (destination === "London") {
         return 183;    
     }
     else if (destination === "Paris") {
         return 220;
     }
-    else {
+    else if (destination) {
         return 300;
+    }
+    else if (!destination) {
+        planetRideCost();
     }
     }
 
