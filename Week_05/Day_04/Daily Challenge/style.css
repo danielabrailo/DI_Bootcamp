@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+  padding: 50px;
+  margin: 50px;
+  background-image: linear-gradient(
+    to right,
+    rgb(158, 11, 163),
+    rgba(233, 160, 202, 0.5)
+  );
+}
+
+h1 {
+  text-decoration: underline;
+}
