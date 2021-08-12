@@ -112,10 +112,13 @@ print(f"The people allowed to see the movie are: {teens_allowed}")
 
 # Exercise 12
 names = ["Ana", "Jose", "David", "Juliette", "Oscar", "Mary"]
-for name in names:
-    age = input(f"How old is {name}? ")
+i = 0
+while i < len(names):
+    age = input(f"How old is {names[i]}? ")
     if int(age) < 16:
-        names.remove(name)
+        names.remove(names[i])
+    elif int(age) >= 16:
+        i += 1
 print(names)
 
 # Exercise 13
