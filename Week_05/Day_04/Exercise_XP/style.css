@@ -1,0 +1,33 @@
+body {
+  background: rgb(127, 151, 99);
+  text-align: center;
+}
+
+.fill {
+  background-image: url("img.jpg");
+  background-size: cover;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+.hold {
+  border: solid 5px #ccc;
+}
+
+.empty {
+  display: inline-block;
+  height: 260px;
+  width: 260px;
+  margin: 10px;
+  border: solid 3px rgb(49, 214, 99);
+  background: white;
+}
+
+.hovered {
+  background: #f4f4f4;
+  border-style: dashed;
+}
