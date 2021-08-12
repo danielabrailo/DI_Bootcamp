@@ -116,5 +116,22 @@ for name in names:
     age = input(f"How old is {name}? ")
     if int(age) < 16:
         names.remove(name)
-
 print(names)
+
+# Exercise 13
+sandwich_orders = ["Egg sandwich", "Pastrami Sandwich", "Ham sandwich", "Pastrami Sandwich", "Cheese sandwich", "Tuna sandwich", "Pastrami Sandwich"]
+finished_sandwiches = []
+for item in sandwich_orders:
+    finished_sandwiches.append(item)
+    print(f"I made your {item}")
+
+# Exercise 14
+print("The deli has run out of pastrami")
+missing_sandwich = "Pastrami Sandwich"
+
+while missing_sandwich in sandwich_orders:
+    sandwich_orders.remove((missing_sandwich))
+while missing_sandwich in finished_sandwiches:
+    finished_sandwiches.remove(missing_sandwich)
+print(sandwich_orders)
+print(finished_sandwiches)
