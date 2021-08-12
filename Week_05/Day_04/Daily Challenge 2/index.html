@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenge 2</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="letters" placeholder="Write only letters"> <br>
+        <input type="submit" value="Submit" id="submitBtn">
+    </form>
+  
+    <script>
+        let submitBtn = document.getElementById("submitBtn")
+        let textForm = document.getElementById("letters");
+
+        submitBtn.addEventListener("click", function(e) {
+            var letters = /^[A-Za-z]+$/;
+            if(textForm.value.match(letters)) {
+            alert("Your name has been accepted");
+            return true;
+             }
+             else{      
+              alert("Please write only letters");
+             return false;
+             }
+
+            e.preventDefault();
+        })
+
+    </script>
+</body>
+</html>
