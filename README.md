@@ -5,4 +5,4 @@ Full Stack Python bootcamp
 * HTML
 * CSS
 * Javascript
-* 
+* Python
