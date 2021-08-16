@@ -1,0 +1,56 @@
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  font-family: "Zilla Slab", serif;
+}
+
+.navbar {
+  font-size: 1rem;
+}
+
+.nav-item {
+  margin: 0 8px;
+  padding: 0 8px;
+}
+
+#header {
+  background-image: url(./imgs/img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+#overlay {
+  position: fixed;
+  /* display: none; */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+  padding-top: 8vh;
+  color: rgb(253, 253, 253);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 6vh;
+}
+
+#welcome {
+  font-size: 5rem;
+  border-bottom: solid 5px rgb(142, 4, 160);
+  border-right: solid 5px rgb(142, 4, 160);
+}
+#about {
+  font-size: 2rem;
+}
