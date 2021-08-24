@@ -1,26 +1,21 @@
+from typing import List
+
+
 class Farm:
-    def __init__(self, farm_name):
+    def __init__(self, farm_name: str):
         self.name = farm_name
         self.animals = {}
 
-    def farm_name(self):
+    def add_animal(self, animal: str, quantity=1) -> None:
+        self.animals[animal] = self.animals.get(animal, 0) + quantity
+
+    def get_info(self) -> None:
         print(f"{self.name}'s farm")
-
-    def add_animal(self, animal, quantity=1):
-        # If the animal already exists just increase, if not create a new one
-        if animal in self.animals:
-            self.animals[animal] += 1
-        else:
-            self.animals[animal] = quantity
-
-    def get_info(self):
         for animal, quantity in self.animals.items():
             print(f"{animal}: {quantity}")
 
-    def get_animals_types(self):
-        animals_list = [animals for animals in self.animals.keys()]
-        sorted_animals = sorted(animals_list)
-        return sorted_animals
+    def get_animals_types(self) -> List:
+        return sorted(self.animals.keys())
 
     def get_short_info(self):
         print(f"{self.name}'s farm has:")
@@ -29,11 +24,10 @@ class Farm:
 
 
 macdonald = Farm("McDonald")
-macdonald.farm_name()
 macdonald.add_animal('cow', 5)
 macdonald.add_animal('sheep')
 macdonald.add_animal('sheep')
 macdonald.add_animal('goat', 12)
-print(macdonald.get_info())
+macdonald.get_info()
 print(macdonald.get_animals_types())
 macdonald.get_short_info()
