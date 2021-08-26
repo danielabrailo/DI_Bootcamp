@@ -84,7 +84,12 @@ class Zoo:
         else:
             print("The animal does not exist in the zoo")
 
- 
+    def sort_animals(self):
+        for letter in list(string.ascii_uppercase):
+            animals_list = [animal for animal in self.animals if animal.startswith(letter)]
+            sorted_list = sorted(animals_list)
+            if sorted_list:
+                print(sorted_list)
 
 
 ramat_gan_safari = Zoo("Ramat Gan Safari")
@@ -100,4 +105,5 @@ ramat_gan_safari.sell_animals("Elephant")
 
 ramat_gan_safari.get_animals()
 
+ramat_gan_safari.sort_animals()
 
