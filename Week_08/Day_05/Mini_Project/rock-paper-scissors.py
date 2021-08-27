@@ -20,7 +20,8 @@ def main():
         if get_user_menu_choice() == "Q":
             flag = False
         elif get_user_menu_choice() == "G":
-            Game.play()
+            new_game = Game()
+            new_game.play()
         elif get_user_menu_choice() == "S":
             print_results(Game.results)
 
