@@ -17,14 +17,14 @@ def print_results(results):
 def main():
     flag = True
     while flag:
-        if get_user_menu_choice() == "Q":
+        choice = get_user_menu_choice()
+        if choice == "Q":
             flag = False
-        elif get_user_menu_choice() == "G":
+        elif choice == "G":
             new_game = Game()
             new_game.play()
-        elif get_user_menu_choice() == "S":
+        elif choice == "S":
             print_results(Game.results)
 
 
 main()
-
