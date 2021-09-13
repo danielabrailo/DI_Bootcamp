@@ -1,54 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis");
-
-html,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-a {
-  font-family: "Zilla Slab", serif;
-}
-
-.wrapper {
-  display: grid;
-  height: 100vh;
-  width: 100vh;
-  grid-template-areas: 
-  "text text text text"
-  "text text text text"
-  "text text text text"
-  "social social social social ";
-  text-align: center;
-}
-
-/* Navbar Style */
-.navbar {
-  font-size: 1rem;
-}
-
-.nav-item {
-  margin: 0 8px;
-  padding: 0 8px;
-}
-
-/* About me section */
-.aboutMe {
-  margin-top: 25px;
-  padding-top: 25px;
-  grid-area: text;
-  color: white;
-  text-align: center;
-  align-self: center;  
-  font-size: 2rem;
-}
-
-
 /* Social Media Section */
 body {
-  background-image: url(./imgs/background-about.jpg);
-  background-size: cover;
+  font-family: 'Dosis';
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +21,6 @@ body .container {
 }
 
 .social-container {
-  grid-area: social;
   position: relative;
   display: inline-block;
   width: 164px;
@@ -146,6 +98,39 @@ body .container {
   background: #73b4ff;
 }
 
+.social-container.facebook .social-cube .front,
+.social-container.facebook .social-cube .back {
+  background: #3b5998;
+}
+
+.social-container.facebook .social-cube .bottom {
+  background: #2d4373;
+}
+
+.social-container.facebook:hover .social-cube .bottom {
+  background: #3b5998;
+}
+
+.social-container.facebook:hover .social-cube .front {
+  background: #4c70ba;
+}
+
+.social-container.youtube .social-cube .front,
+.social-container.youtube .social-cube .back {
+  background: #cc181e;
+}
+
+.social-container.youtube .social-cube .bottom {
+  background: #9e1317;
+}
+
+.social-container.youtube:hover .social-cube .bottom {
+  background: #cc181e;
+}
+
+.social-container.youtube:hover .social-cube .front {
+  background: #e73036;
+}
 
 .social-container.github .social-cube .front,
 .social-container.github .social-cube .back {
@@ -166,34 +151,35 @@ body .container {
 
 .social-container.dribbble .social-cube .front,
 .social-container.dribbble .social-cube .back {
-  background: #4ec24a;
+  background: #ea4c89;
 }
 
 .social-container.dribbble .social-cube .bottom {
-  background: #088504;
+  background: #e51e6b;
 }
 
 .social-container.dribbble:hover .social-cube .bottom {
-  background: #4ec24a;
+  background: #ea4c89;
 }
 
 .social-container.dribbble:hover .social-cube .front {
-  background: #9de99a;
+  background: #ef7aa7;
 }
 
 .social-container.codepen .social-cube .front,
 .social-container.codepen .social-cube .back {
-  background: #4a40e2;
+  background: #191919;
 }
 
 .social-container.codepen .social-cube .bottom {
-  background: rgb(40, 9, 212);
+  background: black;
 }
 
 .social-container.codepen:hover .social-cube .bottom {
-  background: #4a40e2;
+  background: #191919;
 }
 
 .social-container.codepen:hover .social-cube .front {
-  background: #7c74e6;
+  background: #333333;
 }
+/*# sourceMappingURL=about-style.css.map */
