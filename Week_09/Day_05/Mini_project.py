@@ -28,15 +28,16 @@ class Queue:
         else:
             return -1  # Person does not exist in waiting list
 
-    def swap(self, person1: Human, person2: Human):
-        person1_index = self.find_in_queue(person1)
-        person2_index = self.find_in_queue(person2)
-
-        self.waiting_humans.pop(person1_index)
-        self.waiting_humans.insert(person1_index, person2)
-
-        self.waiting_humans.pop(person2_index)
-        self.waiting_humans.insert(person2_index, person1)
+    def swap(self, person1Index: int, person2Index: int):
+        self.waiting_humans[person1Index], self.waiting_humans[person2Index] = self.waiting_humans[person2Index], self.waiting_humans[person1Index]
+        # person1_index = self.find_in_queue(person1)
+        # person2_index = self.find_in_queue(person2)
+        #
+        # self.waiting_humans.pop(person1_index)
+        # self.waiting_humans.insert(person1_index, person2)
+        #
+        # self.waiting_humans.pop(person2_index)
+        # self.waiting_humans.insert(person2_index, person1)
 
     def get_next(self):
         return self.waiting_humans[0]
@@ -67,7 +68,7 @@ class Queue:
 
     def rearrange_queue(self):
         for i in range(len(self.waiting_humans)):
-            if self.waiting_humans[i] and self.waiting_humans[i+1] in Human.family:
+            if self.waiting_humans[i] and self.waiting_humans[i+1] in self.waiting_humans[i].family:
                 self.swap(i + 1, i + 2)
 
 
