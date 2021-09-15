@@ -14,14 +14,14 @@ date_target = date(date_today.year + 1, 1, 1)
 print(f"The 1st of January is in {date_target - date_today}")
 
 # Exercise 3
-# from datetime import datetime
-# user_input = input("Write your birthdate in the following format: YYYY/MM/DD HH:MM:SS\n")
-# user_birthday = datetime.strptime(user_input, "%Y/%m/%d %H:%M:%S")
-# date_now = datetime.now()
-# time_delta = date_now - user_birthday
-# total_seconds = time_delta.total_seconds()
-# minutes = total_seconds/60
-# print(f"You have been alive for {minutes} minutes")
+from datetime import datetime
+user_input = input("Write your birthdate in the following format: YYYY/MM/DD HH:MM:SS\n")
+user_birthday = datetime.strptime(user_input, "%Y/%m/%d %H:%M:%S")
+date_now = datetime.now()
+time_delta = date_now - user_birthday
+total_seconds = time_delta.total_seconds()
+minutes = total_seconds/60
+print(f"You have been alive for {minutes} minutes")
 
 
 # Exercise 4
@@ -55,5 +55,17 @@ print(f"You are {round(neptune, 2)} Neptune-years old")
 
 # Exercise 6
 from faker import Faker
+
 fake = Faker()
-user = [{}]
+user = [{}] * 5
+
+
+def add_data():
+    for i in user:
+        i['name'] = fake.name()
+        i['address'] = fake.address()
+        i['language'] = fake.language_code()
+
+
+add_data()
+print(user)
