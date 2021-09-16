@@ -26,3 +26,23 @@ def main():
 
 
 main()
+
+# Exercise 2
+sampleJson = {
+    "company": {
+        "employee": {
+            "name": "emma",
+            "payable": {
+                "salary": 7000,
+                "bonus": 800
+            }
+        }
+    }
+}
+
+print(sampleJson['company']['employee']['payable']['salary'])
+sampleJson['company']['employee']['birth_date'] = '1/1/1980'
+
+json_file = 'my_file.json'
+with open(json_file, 'w') as file_obj:
+    json.dump(sampleJson, file_obj, indent=2)
