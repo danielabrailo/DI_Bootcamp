@@ -3,7 +3,11 @@ class AnagramChecker:
         with open('sowpods.txt') as f:
             self.text_file = f.read().split()
 
-    # def is_valid_word(self, word):
+    def is_valid_word(self, word):
+        if word.upper() in self.text_file:
+            return True
+        else:
+            return False
 
     def get_anagrams(self, word):
         anagrams_list = []
