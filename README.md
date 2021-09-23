@@ -5,5 +5,6 @@ Exercises and mini-projects
 
 * HTML
 * CSS
+* Bootstrap
 * Javascript
 * Python
