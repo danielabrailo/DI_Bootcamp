@@ -8,3 +8,4 @@ Exercises and mini-projects
 * Bootstrap
 * Javascript
 * Python
+* Flask
