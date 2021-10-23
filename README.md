@@ -9,3 +9,4 @@ Exercises and mini-projects
 * Javascript
 * Python
 * Flask
+* SQL
