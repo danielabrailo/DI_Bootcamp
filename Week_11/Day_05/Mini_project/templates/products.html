@@ -13,7 +13,7 @@
         {% for product in info %}
         <li>
             {{product['Name']}}- ID: {{product['ProductId']}}
-            <button><a href={{url_for('prod_details')}}>Check product</a></button>
+            <button><a href={{url_for('prod_details', product_id=product['ProductId'])}}>Check product</a></button>
         </li>
         {% endfor %}
     </ul></body>
