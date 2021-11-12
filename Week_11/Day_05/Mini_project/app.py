@@ -34,8 +34,12 @@ def cart():
 
 @app.route('/add_product_to_cart/<product_id>')
 def add_product(product_id, name, price):
-    with open(cart_json, 'w') as file_obj:
-        json.dump(product_id, file_obj)
+    new_data = {'product_id': product_id, 'name': name, 'price': price}
+    with open(cart_json, 'r+') as file:
+        file_data = json.load(file)
+        file_data.append(new_data)
+        file.seek(0)
+        json.dump(file_data, file)
     return cart_json
 
 
