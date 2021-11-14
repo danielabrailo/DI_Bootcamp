@@ -24,7 +24,7 @@ def by_type(type):
 
 @app.route('/pokemon/<id>')
 def pok_id(id):
-    types_res = requests.get('https://pokeapi.co/api/v2/pokemon/<id>')
+    types_res = requests.get(f'https://pokeapi.co/api/v2/pokemon/{id}')
     types_data = types_res.json()
     return render_template('pokemon.html', info=types_data)
 
