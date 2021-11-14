@@ -1,4 +1,5 @@
 import json
+import os
 
 import products_data
 from flask import Flask, render_template
@@ -32,15 +33,20 @@ def cart():
     return render_template('cart.html', cart_item=cart_items)
 
 
-@app.route('/add_product_to_cart/<product_id>')
+@app.route('/add_product_to_cart/<product_id>/<name>/<price>')
 def add_product(product_id, name, price):
     new_data = {'product_id': product_id, 'name': name, 'price': price}
-    with open(cart_json, 'r+') as file:
-        file_data = json.load(file)
-        file_data.append(new_data)
+    with open(cart_json, 'w+') as file:
+        if os.stat(cart_json).st_size == 0:
+            file_data = new_data
+        else:
+            file_data = json.load(file)
+            file_data.append(new_data)
         file.seek(0)
         json.dump(file_data, file)
-    return cart_json
+    with open(cart_json, 'r') as f:
+        cart_products = json.load(f)
+    return render_template('cart.html', cart_item=cart_products)
 
 
 if __name__ == '__main__':
