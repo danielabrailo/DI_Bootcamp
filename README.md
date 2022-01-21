@@ -7,6 +7,8 @@ Exercises and mini-projects
 * CSS
 * Bootstrap
 * Javascript
+* Node.js
+* React
 * Python
 * Flask
 * SQL
