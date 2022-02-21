@@ -3,5 +3,5 @@
 Python program to check anagrams of a specific word:
 
 
-![demo-gif](https://github.com/danielabrailo/DI_Bootcamp/blob/57a283146d750f5af57df22c35e6bf1d69059b52/Week_10/Day_05/anagrams.gif)
+![demo-gif](https://github.com/danielabrailo/DI_Bootcamp/blob/55056e163ed43190850e2e8fc5e88818843cce79/Week_08/Day_05/Mini_Project/rock-paper-scissors.gif)
 
